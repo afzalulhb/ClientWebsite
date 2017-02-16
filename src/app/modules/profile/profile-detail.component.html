@@ -1,0 +1,12 @@
+<div *ngIf="profile">
+    <div class="detail">
+        <p><b>Profile Information</b> </p>
+        <b>Name: </b>{{profile.name}}<br>
+        <b>Email:</b> {{profile.email}}<br>
+        <nwm-address-list [addresses]="profile.addresses"></nwm-address-list>
+        <nwm-phone-list [phones]="profile.phones"></nwm-phone-list>
+        <hr>
+    </div>
+    <nwm-profile-advisor [advisor]="accountant"></nwm-profile-advisor>
+    <nwm-profile-advisor [advisor]="lawyer"></nwm-profile-advisor>
+</div>

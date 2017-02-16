@@ -1,0 +1,53 @@
+<div></div>
+    
+    <div class="container-fluid">
+        <div [ngSwitch]="tabId">
+            <h3 *ngSwitchCase='1'>NWM Reports and Statements</h3>
+            <h3 *ngSwitchCase='2'>Planning Documents</h3>
+            <h3 *ngSwitchCase='3'>Tax Information</h3>
+            <h3 *ngSwitchCase='4'>WILLS, TRUSTS & CORPORATE DOCUMENTS</h3>
+        </div>
+        <div class="row"><div class="col-md-12">&nbsp;<div></div>
+        <div class="row">
+            <div class="col-md-3"><label>Filter Keyword:</label></div>
+            <div class="col-md-3"><input type="text" class="filter-text"  [(ngModel)]='listFilter'></div>
+            <div class="col-md-offset-4 col-md-2"><a href="#">Download&nbsp;&nbsp;<img  src="app/shared/images/download.png"></a></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label>{{(tabId ===1)?'Show Statement Date:' : 'Show Document Date:' }}</label></div>
+            <div class="col-md-3"><label>From: <input type="date" [(ngModel)]="fromDate"></label></div>
+            <div class="col-md-3"><label>To: <input type="date" [(ngModel)]="toDate"></label></div>
+            <div class="col-md-offset-1 col-md-2"><label>Select All &nbsp;&nbsp;<input type="checkbox" value="Select All" [checked]="allChecked" (change)= "chkSelectAll()" ></label></div>
+        </div>
+        <div class="row"><div class="col-md-12">&nbsp;<div></div>
+        <div class="row">
+            <div class='table-responsive'>
+                <table class='table'
+                        *ngIf='documentStatements && documentStatements.length'>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Title</th>
+                            <th>{{(tabId ===1)?'Statement Date:' : 'Document Date:' }}</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let statement of documentStatements | statementFilter:listFilter'>
+                            <td>
+                                <img 
+                                        [src]='statement.fileTypeImgUrl'
+                                        [title]='statement.fileName | uppercase'
+                                        [style.width.px]='imageWidth' 
+                                        [style.margin.px]='imageMargin'>
+                            </td>
+                            <td>{{statement.fileName}}</td>
+                            <td>{{ statement.statementDate }}</td>
+                            <td><input type="checkbox" [(ngModel)]="statement.isChecked"  (change)= "chkSingleSelect()" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

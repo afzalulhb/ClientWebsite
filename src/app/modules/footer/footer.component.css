@@ -1,0 +1,33 @@
+ .nav__footer {
+        height: 50px;
+    background: #363636;
+    text-align: right;
+    position: relative;
+    z-index: 50;
+    }
+
+        .nav__footer .nav__link {
+            display: inline-block;
+            padding: 17px 3px;
+            height: 50px;
+            color: #898989;
+            /*text-transform: uppercase;*/
+        }
+
+        .nav__footer .nav__link--search {
+            height: 30px;
+            padding: 0;
+            margin-right: 0;
+        }
+
+        .nav__footer .nav__link--active, .nav__footer .nav__link:focus, .nav__footer .nav__link:hover {
+            color: #FFF;
+        }
+        .right-align-30{
+    padding-right:30px;
+    }   
+
+    
+.footer span{
+    color: #898989;
+}

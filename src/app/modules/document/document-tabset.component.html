@@ -1,0 +1,26 @@
+<ngb-tabset type="tabs">
+    <ngb-tab>
+        <template ngbTabTitle><b>NWM Statements</b><br>&nbsp;</template>
+        <template ngbTabContent>
+            <document-statements [tabId]='1'></document-statements>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Planning</b><br>&nbsp;</template>
+        <template ngbTabContent>
+            <document-statements [tabId]='2'></document-statements>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Tax Information</b><br>&nbsp;</template>
+        <template ngbTabContent>
+            <document-statements [tabId]='3'></document-statements>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Wills, Trusts & <br>Corporate Documents</b></template>
+        <template ngbTabContent>
+            <document-statements [tabId]='4'></document-statements>
+        </template>
+    </ngb-tab>
+</ngb-tabset>

@@ -1,0 +1,13 @@
+<div *ngIf="phones && phones.length" class="phone">
+    <div class="row" *ngFor="let phone of phones; let i=index">
+        <div class="col-sm-4">
+            <b *ngIf="i===0">Phones: </b>
+        </div>
+        <div class="col-sm-4">
+            {{phone.number}}
+        </div>
+        <div class="col-sm-4">
+            ({{phone.type}})
+        </div>
+    </div>
+</div>

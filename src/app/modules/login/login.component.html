@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12  nav__login  right-align-30">
+            <div *ngIf="userName">
+                <a class="nav__link " href="#/">Welcome {{userName}}!</a>
+                <a class="btn btn-primary" href="#/">LOGOUT</a>
+            </div>
+            <div *ngIf="!userName">
+                <a class="btn btn-primary" href="#/">LOGIN</a>
+            </div>
+        </div>
+    </div>
+</div>

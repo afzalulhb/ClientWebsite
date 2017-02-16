@@ -1,0 +1,26 @@
+<div class="advisor" *ngIf="advisor">
+    <div class="row">
+        <div class="col-sm-4"> <b>{{advisor.type === 'Accountant'? 'Accountant':'Lawyer'}}:</b></div>
+        <div class="col-sm-4">{{advisor.name}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"> <b>Email:</b></div>
+        <div class="col-sm-4">{{advisor.email}}</div>
+    </div>
+    <div *ngIf="advisor.phones && advisor.phones.length" class="phone">
+        <div class="row" *ngFor="let phone of advisor.phones; let i=index">
+            <div class="col-sm-4">
+                <b *ngIf="i===0">Phones: </b>
+            </div>
+            <div class="col-sm-4">
+                {{phone.number}}
+            </div>
+            <div class="col-sm-4">
+                ({{phone.type}})
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

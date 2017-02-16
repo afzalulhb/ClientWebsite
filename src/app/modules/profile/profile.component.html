@@ -1,0 +1,14 @@
+<div class="container-fluid">
+
+    <h1>My Profiles</h1>
+
+    <nav>
+        <a *ngFor="let prof of profiles" [routerLink]="['/profile/detail', prof.id]">
+            <h4>{{prof.name}}</h4>
+        </a>
+    </nav>
+    <hr>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

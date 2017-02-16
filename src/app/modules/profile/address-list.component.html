@@ -1,0 +1,15 @@
+<div *ngIf="addresses && addresses.length">
+    <div class="row address" *ngFor="let address of addresses; let i=index">
+        <div class="col-sm-4">
+            <b *ngIf="i===0">Addresses: </b>
+        </div>
+        <div class="col-sm-4">
+            ({{address.description}})<br> {{address.address1}}
+            <br> {{address.address2}}
+            <br *ngIf="address.address2"> {{address.city}} {{address.province}}<br> {{address.country}} {{address.postal}}<br>
+        </div>
+        <div class="col-sm-4">
+            ({{address.type}})
+        </div>
+    </div>
+</div>
