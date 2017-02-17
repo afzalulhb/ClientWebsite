@@ -26,6 +26,7 @@ constructor(private _route: ActivatedRoute,
 
     ngOnInit(): void{
         this.getProfiles();
+        
     }
     ngOnDestroy() {
             this.sub.unsubscribe();

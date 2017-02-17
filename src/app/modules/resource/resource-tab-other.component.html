@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div  *ngIf='resources && resources.length'> 
+        <h4>OTHER RESOURCES</h4>      
+        <div class="row"  *ngFor='let res of resources'> 
+            <br>
+        <div class="col-md-2">
+            <img [src]='res.imageUrl' [title]='res.title | uppercase' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>    
+        </div>
+
+        <div class="col-md-10">
+            <a [href]='res.contentLink'>{{res.title}}</a>
+            {{res.summary}}
+        </div>   
+        </div> 
+    </div>
+</div>

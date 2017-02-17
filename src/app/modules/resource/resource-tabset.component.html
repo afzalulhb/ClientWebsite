@@ -1,0 +1,26 @@
+<ngb-tabset type="tabs">
+    <ngb-tab>
+        <template ngbTabTitle><b>Newsletters</b></template>
+        <template ngbTabContent>
+            <nwm-resource-tab-newsletter [resource]='newsletterResource' [resources]='newsletterResources'></nwm-resource-tab-newsletter>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Presentations</b></template>
+        <template ngbTabContent>
+            <nwm-resource-tab-presentation [resource]='presentationResource' [resources]='presentationResources'></nwm-resource-tab-presentation>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Planning</b></template>
+        <template ngbTabContent>
+            <nwm-resource-tab-planning [resources]='planningResources'></nwm-resource-tab-planning>
+        </template>
+    </ngb-tab>
+    <ngb-tab>
+        <template ngbTabTitle><b>Other Resources</b></template>
+        <template ngbTabContent>
+            <nwm-resource-tab-other [resources]='otherResources'></nwm-resource-tab-other>
+        </template>
+    </ngb-tab>
+</ngb-tabset>

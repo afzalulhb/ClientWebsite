@@ -10,14 +10,14 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent }  from './app.component';
 import { LoginComponent }  from './modules/login/login.component';
 import { MenuComponent }  from './modules/menu/menu.component';
-//import { MenuListComponent }  from './modules/menu/menu-list.component';
 import { FooterComponent }  from './modules/footer/footer.component';
 
 import { DocumentModule } from './modules/document/document.module';
 import { ProfileModule } from './modules/profile/profile.module';
-import { ResourceComponent } from './modules/resource/resource.component';
+import { ResourceModule } from './modules/resource/resource.module';
 import { PortfolioComponent } from './modules/portfolio/portfolio.component';
 import { AdvisorComponent } from './modules/advisor/advisor.component';
+
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { AdvisorComponent } from './modules/advisor/advisor.component';
     JsonpModule,
     DocumentModule,
     ProfileModule,
+    ResourceModule,
     ],
   declarations: [ 
     AppComponent ,
@@ -38,12 +39,12 @@ import { AdvisorComponent } from './modules/advisor/advisor.component';
     MenuComponent,
     //MenuListComponent,
     FooterComponent,
-    ResourceComponent,
     PortfolioComponent,
     AdvisorComponent,
     ],
     providers:
     [
+      
     ],
   bootstrap:    [ AppComponent ]
 })

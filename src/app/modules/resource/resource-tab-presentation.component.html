@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="resource" class="col-md-12 current-presentattion">
+            <h4>PRESENTATIONS</h4>
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="{{resource.contentLink}}">
+                        <img src='{{resource.imageUrl}}' />
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <p><b>{{resource.title}}</b></p>
+                    <p>{{resource.summary}}</p>
+                    <a href="{{resource.contentLink}}">Clieck Here To View
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">&nbsp;
+
+            <div class='table-responsive'>
+                <table class='table' *ngIf='resources && resources.length'>
+                    <caption>Recent Presentations</caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Title</th>
+                            <th>Topic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let res of resources'>
+                            <td>
+                                <img [src]='res.fileTypeImgUrl' [title]='res.fileName | uppercase' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                            </td>
+                            <td><a href="{{res.contentLink}}">{{res.title}}</a></td>
+                            <td>{{ res.topic }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

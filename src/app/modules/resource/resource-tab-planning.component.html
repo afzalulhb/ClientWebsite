@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">  
+        <h4>PLANNING</h4>      
+        <div class="col-md-12">&nbsp;
+            <div class='table-responsive'>
+                <table class='table' *ngIf='resources && resources.length'>
+                    <caption>Resource Documents</caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Title</th>
+                            <th>Topic</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let res of resources'>
+                            <td>
+                                <img [src]='res.fileTypeImgUrl' [title]='res.fileName | uppercase' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                            </td>
+                            <td><a href="{{res.contentLink}}">{{res.title}}</a></td>
+                            <td>{{ res.topic }}</td>
+                            <td>{{ res.source }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,11 +3,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { BrowserModule } from '@angular/platform-browser';
-//import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 
-import { ProfileComponent }  from './profile.component';
+import { ProfileComponent } from './profile.component';
 import { ProfileDetailComponent } from './profile-detail.component';
 import { ProfileService } from './profile.service';
 import { PhoneListComponent } from './phone-list.component';
@@ -16,21 +15,20 @@ import { ProfileAdvisorComponent } from './profile-advisor.component';
 
 
 @NgModule({
-    imports:[
-      BrowserModule,
-    //  FormsModule,
-      RouterModule,
+  imports: [
+    BrowserModule,
+    RouterModule,
     NgbModule.forRoot(),
-    ],
-    declarations:[
+  ],
+  declarations: [
     ProfileDetailComponent,
     PhoneListComponent,
     AddressListComponent,
     ProfileAdvisorComponent,
     ProfileComponent,
-    ],
-    providers:[
-      ProfileService,
-      ]
+  ],
+  providers: [
+    ProfileService,
+  ]
 })
-export class ProfileModule{}
+export class ProfileModule { }

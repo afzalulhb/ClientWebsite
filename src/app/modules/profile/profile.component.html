@@ -3,7 +3,7 @@
     <h1>My Profiles</h1>
 
     <nav>
-        <a *ngFor="let prof of profiles" [routerLink]="['/profile/detail', prof.id]">
+        <a *ngFor="let prof of profiles" [routerLink]="['/profile/details', prof.id]">
             <h4>{{prof.name}}</h4>
         </a>
     </nav>
